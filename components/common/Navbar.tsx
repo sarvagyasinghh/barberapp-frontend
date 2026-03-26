@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useTheme } from '@/context/ThemeContext';
-import { FaSearch, FaBell, FaUser, FaMoon, FaSun } from 'react-icons/fa';
+import { FaSearch, FaBell, FaUser, FaMoon, FaSun, FaTimes, FaMenu } from 'react-icons/fa';
 import { ROUTES, USER_ROLES } from '@/lib/constants';
 import styles from './Navbar.module.css';
 
