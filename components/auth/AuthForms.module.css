@@ -1,0 +1,198 @@
+/* components/auth/AuthForms.module.css */
+
+.formContainer {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem 1rem;
+}
+
+.dark-mode .formContainer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.formContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  max-width: 450px;
+  width: 100%;
+  animation: slideUp 0.5s ease;
+}
+
+.dark-mode .formContent {
+  background: #2a2a2a;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formContent h2 {
+  color: #0066cc;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.dark-mode .formContent h2 {
+  color: #0080ff;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 12px;
+  color: #0066cc;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+.dark-mode .icon {
+  color: #0080ff;
+}
+
+.inputGroup input {
+  padding-left: 40px !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+  border-color: #0066cc !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+}
+
+.showPasswordBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.showPasswordBtn:hover {
+  color: #0066cc;
+}
+
+.submitBtn {
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.dark-mode .tabs {
+  border-bottom-color: #444;
+}
+
+.tabButton {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tabButton.active {
+  color: #0066cc;
+  border-bottom-color: #0066cc;
+}
+
+.dark-mode .tabButton.active {
+  color: #0080ff;
+  border-bottom-color: #0080ff;
+}
+
+.tabButton:hover:not(.active) {
+  color: #0066cc;
+}
+
+.passwordStrength {
+  height: 4px;
+  background-color: #e9ecef;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.strengthBar {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.strengthWeak {
+  width: 33%;
+  background-color: #dc3545;
+}
+
+.strengthFair {
+  width: 66%;
+  background-color: #ffc107;
+}
+
+.strengthStrong {
+  width: 100%;
+  background-color: #28a745;
+}
+
+@media (max-width: 576px) {
+  .formContainer {
+    padding: 1rem;
+  }
+
+  .formContent {
+    padding: 1.5rem;
+  }
+
+  .formContent h2 {
+    font-size: 1.5rem;
+  }
+}

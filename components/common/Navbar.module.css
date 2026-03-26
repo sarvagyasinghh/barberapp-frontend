@@ -1,0 +1,94 @@
+/* components/common/Navbar.module.css */
+
+.navbar {
+  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .navbar {
+  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+}
+
+.brand {
+  color: white !important;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  font-size: 1.8rem;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.themeToggle {
+  color: white;
+  margin-right: 1rem;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.3s ease;
+}
+
+.themeToggle:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffc107;
+}
+
+.notificationBadge {
+  background-color: #ff4444;
+  font-size: 0.7rem;
+}
+
+.navbar .dropdown-menu {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .brandtext {
+    font-size: 1.25rem;
+  }
+
+  .navbar .nav-link {
+    margin: 0.5rem 0;
+  }
+}
