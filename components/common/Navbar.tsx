@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useTheme } from '@/context/ThemeContext';
-import { FaSearch, FaBell, FaUser, FaMoon, FaSun, FaTimes, FaMenu } from 'react-icons/fa';
+import { FaSearch, FaBell, FaUser, FaMoon, FaSun, FaTimes, FaBars } from 'react-icons/fa';
 import { ROUTES, USER_ROLES } from '@/lib/constants';
 import styles from './Navbar.module.css';
 
@@ -44,7 +44,7 @@ export default function Navbar() {
           className="btn btn-sm d-lg-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <FaTimes /> : <FaMenu />}
+          {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Navbar Content */}
